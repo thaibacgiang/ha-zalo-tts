@@ -1,48 +1,16 @@
 say:
-  name: Say
-  description: Read a text message
+  name: Zalo TTS Say
+  description: Phát giọng nói bằng Zalo TTS
   fields:
     entity_id:
-      name: Entity
-      description: Entity
       required: true
-      advanced: true
-      example: media_player.home
-      default: ""
       selector:
         entity:
+          domain: media_player
     message:
-      name: Message
-      description: Message
       required: true
-      advanced: true
-      example: "Đây là nội dung mẫu"
-      default: ""
-      selector:
-        text:
-          multiline: true
-    speed:
-      name: Speed
-      description: Speed setting
-      required: true
-      advanced: true
-      example: "1"
-      default: "1"
-      selector:
-        number:
-          min: 0.8
-          max: 1.2
+      example: "Chào mừng anh đã về nhà"
     voice:
-      name: Voice
-      description: Female or male, north or south
-      required: true
-      advanced: true
-      example: "1"
-      default: "1"
-      selector:
-        select:
-          options:
-            - "1"
-            - "2"
-            - "3"
-            - "4"
+      example: 1
+    speed:
+      example: 1.0
